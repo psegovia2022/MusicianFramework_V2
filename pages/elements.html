@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framework Group 6 Musicians</title>
+
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700;800&family=Open+Sans:wght@300;500;700;800&family=Roboto:wght@300;500;700;900&family=Ysabeau:wght@300;500;700;900&display=swap" rel="stylesheet">
+
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <!-- CSS custom styles -->
+    
+    <link rel="stylesheet" href="../css/main.css">
+
+    <!-- Javascript link -->
+    <script src="../scripts/scripts.js" defer></script>
+
+</head>
+<body>
+    
+    <header>
+        <nav class="topNav">
+            <a href="../index.html" id="logoLink">
+                <img src="../images/OnYr6_a.svg"" alt="music symbol" id="logo">
+        </a>
+        <ul class="menu">
+            <li>
+                <a href="../index.html" class="menuItem">Home</a>
+            
+            </li>
+            <li>
+                <a href="../pages/elements.html" class="active menuItem">Elements</a>
+            
+            </li>
+            <li>
+                <a href="../pages/components.html" class="menuItem">Components</a>
+            </li>
+            <li>
+                <a href="../pages/demos.html" class="menuItem">Demos</a>
+            </li>
+        </ul>
+        <button class="icon">
+            <i class="fa-solid fa-bars menuIcon"></i>
+            <i class="fa-regular fa-rectangle-xmark closeIcon"></i>
+        </button>
+    </nav>
+    </header>
+    <main class="container">
+        <article>
+        <h1>The basics</h1>
+        <h2>What would you find here?</h2>
+        <p>Here you will find the basic elements to start and style your website. </p>
+        <p>We provide a brief explanation of each element, how it will display and the code snippet.</p>
+        <p>Give them a try!</p>
+
+        <article>
+            <h2>Typography</h2>
+            <p>Font Family</p>
+            <p>Headings</p>
+            <p>Line-height</p>
+            <p>Styles</p>
+            <p>Sizes</p>
+            
+            <div>Code Example</div>
+
+            <pre>
+                <code>
+                    &lt!-- Standard Headings --&gt
+                    &lth1&gt Heading &lt/h1&gt
+                    &lth2&gt Heading &lt/h2&gt
+                    &lth3&gt Heading &lt/h3&gt
+                    &lth4&gt Heading &lt/h4&gt
+                    &lth5&gt Heading &lt/h5&gt
+                    &lth6&gt Heading &lt/h6&gt
+
+
+                    &lt!-- Standard Font Size --&gt
+                    &ltp&gtOur standard font size sits at 16px over a 1.5 line height&ltp&gt
+
+
+                    &lt!-- Stylized Text Tags --&gt
+                    &ltstrong&gtBold&lt/strong&gt
+                    &ltem&gtItalic&lt/em&gt
+                    &ltu&gtUnderline&lt/u&gt
+                    &lts&gtStrikethrough&lt/s&gt
+                </code>
+            </pre>
+        </article>
+
+        <article id="colors">
+            <h2>Color Palettes Paulina Gary</h2>
+            <p>We know our niche and the broad musical types and how they might influence your color choice. But, do not panic, we have you covered.</p>
+            <p>Here are several color palettes for you to chose, and the code and class name you'll need to use in order to use each background-color. Every palette also consideres black and white.</p>
+
+            <section class="basicBW">
+                <p> Basic colors </p>
+                <ul>
+                    <li>
+                        Black: 
+                        <div class="color black"></div>
+                        <p>The rgb code for black is</p>
+                        <pre>
+                            <code> rgb(0, 0, 0) </code>
+                        </pre>
+                        <p>Example code:</p>
+                        <pre>
+                            <code> &ltbutton class="black"> Send &lt/button>  </code>
+                        </pre>
+                        
+                    </li>
+                    <li> White:
+                        <div class="color white" ></div>
+                        <pre>
+                            <code> rgb(255, 255, 255) </code>  
+                        </pre>
+                        <p>Example code:</p>
+                        <pre>
+                            <code> &ltbutton class="white"> Send &lt/button>  </code>
+                        </pre>
+                    </li>
+                </ul>
+            </section>
+            
+            <section class="BGR">
+                <p> Grays | Red</p>
+                <ul>
+                    <li>
+                        Dark gray: 
+                        <div class="color gray" ></div>
+                        <pre>
+                            <code> rgb(128, 128, 128) </code>
+                        </pre>
+                        <pre>
+                            <code> &ltbutton class="gray"> Send &lt/button>  </code>
+                        </pre>                        
+                    </li>
+                    <li>
+                        Light gray: 
+                        <div class="color lightGray" ></div>
+                        <pre>
+                            <code> rgb(211, 211, 211) </code>
+                        </pre>
+                        <p>Example code:</p>
+                        <pre>
+                            <code> &ltbutton class="lightGray"> Send &lt/button>  </code>
+                        </pre>
+                    </li>
+                    <li>
+                        Red: 
+                        <div class="color red" ></div>
+                        <pre>
+                            <code> rgb(255, 0, 0) </code>
+                        </pre>
+                        <p>Example code:</p>
+                        <pre>
+                            <code> &ltbutton class="red"> Reset &lt/button>  </code>
+                        </pre>
+                    </li>
+                </ul>   
+            </section>
+
+            <section class="earth">
+                <p>Earth</p>
+                <ul>
+                    <li>
+                        Ocean blue: 
+                        <div class="color darkBlue"></div>
+                        <pre>
+                            <code> rgb(10, 54, 155) </code>
+                        </pre>
+                        
+                        <p>Example code:</p>
+                        <pre>
+                            <code> &ltbutton class="darkBlue"> Send &lt/button>  </code>
+                        </pre>
+                    </li>
+                    <li>
+                        Sky blue: 
+                        <div class="color lightBlue" ></div>
+                       <pre>
+                        <code> rgb(118, 158, 226) </code>
+                       </pre> 
+                        <p>Example code:</p>
+                        <pre>
+                            <code> &ltbutton class="lightBlue"> Send &lt/button>  </code>
+                        </pre>
+                    </li>
+                    <li>
+                        Green:                         
+                        <div class="color green" ></div>
+                        <pre>
+                            <code> rgb(211, 211, 211) </code>
+                        </pre>
+                        <p>Example code:</p>
+                        <pre>
+                            <code> &ltbutton class="green"> Send &lt/button>  </code>
+                        </pre>
+                    </li>
+                </ul>   
+            </section>
+            <section class="desert">
+                <p>Desert</p>
+                <ul>
+                    <li>
+                        Sand 1: 
+                        <div class="color darkOrange"></div>
+                        <pre>
+                            <code> rgb(10, 54, 155) </code>
+                        </pre>
+                        <p>Example code:</p>
+                        <pre>
+                            <code> &ltbutton class="darkOrange"> Send &lt/button>  </code>
+                        </pre>
+                    </li>
+                    <li>
+                        Sand 2: 
+                        <div class="color lightOrange"></div>
+                        <pre>
+                            <code> rgb(10, 54, 155) </code>
+                        </pre>
+                        <p>Example code:</p>
+                        <pre>
+                            <code> &ltbutton class="lightOrange"> Send &lt/button>  </code>
+                        </pre>
+                    </li>
+                    <li>
+                        Sand 3:                        
+                        <div class="color yellow" ></div>
+                        
+                        <pre>
+                            <code> rgb(118, 158, 226) </code>
+                        </pre>
+                        <p>Example code:</p>
+                        <pre>
+                            <code> &ltbutton class="yellow"> Send &lt/button>  </code>
+                        </pre>
+                    </li>                   
+                </ul>   
+            </section>
+        </article>
+
+        <article>            
+            <h2>Lists Paulina</h2>
+            <div>
+                <h3>Unordered Lists</h3>
+                <p>Our unordered list uses disc list style, and it would look like this.</p>
+                <ul class="disc1">
+                    <li>Item 1</li>
+                        <ul class="disc2">
+                            <li> Item 1.1</li>
+                            <li> Item 1.2</li>
+                            <li> Item 1.2</li>
+                        </ul>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ul>
+
+               <p>Example code:</p>
+                
+                <pre>
+                    <code>
+                        &ltul class="disc1">
+                            &ltli>Item 1&lt/li>
+                                &ltul class="disc2">
+                                    &ltli> Item 1.1&lt/li>
+                                    &ltli> Item 1.2&lt/li>
+                                    &ltli> Item 1.2&lt/li>
+                                &lt/ul>
+                            &ltli>Item 2&lt/li>
+                            &ltli>Item 3&lt/li>
+                        &lt/ul>
+                    </code>
+                </pre>
+            </div>
+
+            <div>
+                <h3>Ordered Lists Paulina</h3>
+                <p>Our ordered list uses decimal list style, and it would look like this.</p>
+                <ol class="decimal">
+                    <li>Item 1</li>
+                        <ol class="decimal2">
+                            <li> Item 1.1</li>
+                            <li> Item 1.2</li>
+                            <li> Item 1.2</li>
+                        </ol>
+                    <li>Item 2</li>
+                    <li>Item 3</li>
+                </ol>
+
+                <p> Example code:</p>
+                
+                <pre>
+                    <code>
+                        &ltol class="decimal">
+                            &ltli>Item 1&lt/li>
+                                &ltol class="decimal2">
+                                    &ltli> Item 1.1&lt/li>
+                                    &ltli> Item 1.2&lt/li>
+                                    &ltli> Item 1.2&lt/li>
+                                &lt/ol>
+                            &ltli>Item 2&lt/li>
+                            &ltli>Item 3&lt/li>
+                        &lt/ol>
+                    </code>
+                </pre>
+            </div>
+        </article>
+
+        <article>
+            <h2>Buttons Paulina</h2>
+            <p>We provide several button options regading sizes, colors, functions, and states. Take a look next and then pay close attention to our example code and the classes added.</p>
+            
+            <h3>Colors</h3>
+            <p>The classes for each color are given in the <a href="#colors">color palettes</a> section. </p>
+                <button class="black">Black</button>
+                <button class="white"> White</button>
+                <button class="gray"> Gray</button>
+                <button class="lightGray"> Light Gray</button>
+                <button class="red"> Red</button>
+                <button class="darkBlue"> Dark Blue</button>
+                <button class="lightBlue"> Light Blue</button>
+                <button class="green"> Green</button>
+                <button class="darkOrange"> Dark Orange</button>
+                <button class="lightOrange"> Light Orange</button>
+                <button class="yellow"> Yellow</button>
+
+            <h3>Sizes</h3>
+                <p>We have 4 different sizes availables for the buttons: extra small, small, medium, and large.</p>
+                <h4>Extra small</h4>
+                    <button class="XS "> X </button>
+                    <pre>
+                        <code>
+                        &ltbutton class="XS"> X &lt/button>
+                        </code>
+                    </pre>
+                    <p>Example code: For example, if you wish a red extra small button, you should add the following classes for it to look like this.</p>
+                    <button class="XS red"> X </button>
+                    <pre>
+                        <code>
+                        &ltbutton class="XS red"> X &lt/button>
+                        </code>
+                    </pre>
+
+                <h4>Small</h4>
+                    <button class="S"> Small</button>
+                    <pre>
+                        <code>
+                        &ltbutton class="S"> Small &lt/button>
+                        </code>
+                    </pre>
+
+                <h4>Medium</h4>
+                    <button class="M"> Medium</button>
+                    <pre>
+                        <code>
+                        &ltbutton class="M"> Medium &lt/button>
+                        </code>
+                    </pre>
+
+                <h4>Large</h4>
+                    <button class="L"> Large</button>
+                    <pre>
+                        <code>
+                        &ltbutton class="L"> Large &lt/button>
+                        </code>
+                    </pre>
+
+            <h3>Functions</h3>
+                <p>We also covered different options of buttons, such us input, submit and reset.</p>
+                
+                <h4>Input</h4>
+                    <p>Pay attention to the class name, and also you should assign the name, id, and value if needed in your code.</p>
+                    <input type="button" class= "button lightOrange M" value="Connect!" name="" id="">
+                    <pre>
+                        <code>
+                        &ltinput type="button" class= "button" value="Connect!" name="" id="">
+                        </code>
+                    </pre>
+
+                <h4>Submit</h4>
+                    <p>Here you have several options. We recommend using the classes green and M for this button.</p>
+                    <button class="submit M green"> Submit</button>
+                    <pre>
+                        <code>
+                        &ltbutton class="submit M green"> Submit&lt/button>
+                        </code>
+                    </pre>
+                
+                <h4> Reset</h4>
+                    <p>Here you have several options. We recommend using the classes red and M for this button.</p>
+
+                    <button class="reset red M">Reset</button>
+                    <pre>
+                        <code>
+                        &ltbutton class="reset M red"> Reset&lt/button>
+                        </code>
+                    </pre>
+
+            <h3>States</h3>
+            <p>We cover stated nomal, hover and active.</p>
+                <h4>Hover</h4>
+                    <button class="L black"> Connect!</button>
+                    <pre>
+                        <code>
+                        &ltbutton class="reset M red"> Reset&lt/button>
+                        </code>
+                    </pre>
+
+            
+        </article>
+
+
+        <article>
+            <h2>Tables Paulina</h2>
+            <p>Here you will have the option to chose between two types of tables: striped tables and a bordered table. </p>
+            
+            <div>
+                <h3>Striped Table </h3>
+                <p>Our striped table uses our color pallete called Earth, and it would look like this.</p>
+                
+                <table class="striped">
+                    <tr>
+                        <th>Song Title</th>
+                        <th>Album</th>
+                        <th>Year</th>
+                    </tr>
+                    <tr>
+                        <td> Les passants </td>
+                        <td>Zaz</td>
+                        <td>2010</td>
+                    </tr>
+                    <tr>
+                        <td> Je veux </td>
+                        <td>Zaz</td>
+                        <td>2010</td>
+                    </tr>
+                    <tr>
+                        <td> Le long de la route </td>
+                        <td>Zaz</td>
+                        <td>2010</td>
+                    </tr>
+                    <tr>
+                        <td> Paris sera toujours Paris </td>
+                        <td>Paris</td>
+                        <td>2014</td>
+                    </tr>
+                    <tr>
+                        <td> Sur le ciel du Paris </td>
+                        <td>Paris</td>
+                        <td>2014</td>
+                    </tr>
+                    <tr>
+                        <td> Si jamais j'oublie</td>
+                        <td>Sur la route</td>
+                        <td>2015</td>
+                    </tr>
+                </table>
+
+
+                <p> Example code: To build a striped table you just need to add the class "striped" to your open table tag.</p>
+                
+                <pre>
+                    <code>
+                        &lttable class="striped">
+                            &lttr>
+                                &ltth>Song Title&lt/th>
+                                &ltth>Album&lt/th>
+                                &ltth>Year&lt/th>
+                            &lt/tr>
+                            &lttr>
+                                &lttd> Les passants &lt/td>
+                                &lttd>Zaz&lt/td>
+                                &lttd>2010&lt/td>
+                            &lt/tr>
+                            &lttr>
+                                &lttd> Je veux &lt/td>
+                                &lttd>Zaz&lt/td>
+                                &lttd>2010&lt/td>
+                            &lt/tr>
+                            &lttr>
+                                &lttd> Le long de la route &lt/td>
+                                &lttd>Zaz&lt/td>
+                                &lttd>2010&lt/td>
+                            &lt/tr>
+                            &lttr>
+                                &lttd> Paris sera toujours Paris &lt/td>
+                                &lttd>Paris&lt/td>
+                                &lttd>2014&lt/td>
+                            &lt/tr>
+                        &lttable>
+                    </code>
+                </pre>
+            </div>
+
+            <div>
+                <h3>Bordered Table </h3>
+                <p>Our bordered table uses our color pallete called Earth, and it would look like this.</p>
+                
+                <table class="bordered">
+                    <tr>
+                        <th>Song Title</th>
+                        <th>Album</th>
+                        <th>Year</th>
+                    </tr>
+                    <tr>
+                        <td> Les passants </td>
+                        <td>Zaz</td>
+                        <td>2010</td>
+                    </tr>
+                    <tr>
+                        <td> Je veux </td>
+                        <td>Zaz</td>
+                        <td>2010</td>
+                    </tr>
+                    <tr>
+                        <td> Le long de la route </td>
+                        <td>Zaz</td>
+                        <td>2010</td>
+                    </tr>
+                    <tr>
+                        <td> Paris sera toujours Paris </td>
+                        <td>Paris</td>
+                        <td>2014</td>
+                    </tr>
+                    <tr>
+                        <td> Sur le ciel du Paris </td>
+                        <td>Paris</td>
+                        <td>2014</td>
+                    </tr>
+                    <tr>
+                        <td> Si jamais j'oublie</td>
+                        <td>Sur la route</td>
+                        <td>2015</td>
+                    </tr>
+                </table>
+
+
+                <p> Example code: To build a bordered table you just need to add the class "bordered" to your open table tag.</p>
+                
+                <pre>
+                    <code>
+                        &lttable class="bordered">
+                            &lttr>
+                                &ltth>Song Title&lt/th>
+                                &ltth>Album&lt/th>
+                                &ltth>Year&lt/th>
+                            &lt/tr>
+                            &lttr>
+                                &lttd> Les passants &lt/td>
+                                &lttd>Zaz&lt/td>
+                                &lttd>2010&lt/td>
+                            &lt/tr>
+                            &lttr>
+                                &lttd> Je veux &lt/td>
+                                &lttd>Zaz&lt/td>
+                                &lttd>2010&lt/td>
+                            &lt/tr>
+                            &lttr>
+                                &lttd> Le long de la route &lt/td>
+                                &lttd>Zaz&lt/td>
+                                &lttd>2010&lt/td>
+                            &lt/tr>
+                            &lttr>
+                                &lttd> Paris sera toujours Paris &lt/td>
+                                &lttd>Paris&lt/td>
+                                &lttd>2014&lt/td>
+                            &lt/tr>
+                        &lttable>
+                    </code>
+                </pre>
+            </div>
+        </article>
+
+        <article>
+            <h2>Images ??? Gary</h2>
+            <p>Tags used</p>
+
+            <div>example</div>
+
+            <pre>
+                <code>
+                    &lt dsdsqsqwasdasd
+                </code>
+            </pre>
+        </article>
+
+        <article>
+            <h2>Navigation Bar</h2>
+            <p> First, we will present this navigation for mobile size. We use a hamburguer Font-Awesome icon.</p>
+            <p>It would look just like the navigation in this website. So, take a look to the <a href="#top">top</a>  and play with the different sizes.</p>
+    
+            <!-- <img src="../images/navBarClosed.png" alt="">
+            <img src="../images/navBarOpen.png" alt=""> -->
+            <p> Example code: To build this navigation bar, you will need to add several classes and id, pay close attention to the following example code.</p>
+
+            <pre>
+                <code>
+                    &ltnav class="topNav">
+                        &lta href="" id="logoLink">
+                        &ltimg src="" alt="" id="logo">
+                        &lt/a>
+                        &ltul class="menu">
+                            &ltli>
+                                &lta href="" class="menuItem active">Option 1&lt/a>
+                            &lt/li>
+                            &ltli>
+                                &lta href="" class="menuItem">Option 2&lt/a>
+                            &lt/li>
+                            &ltli>
+                                &lta href="" class="menuItem">Option 3&lt/a>
+                            &lt/li>
+                        &lt/ul>
+                        &ltbutton class="icon">
+                            &lti class="fa-solid fa-bars menuIcon">&lt/i>
+                            &lti class="fa-regular fa-rectangle-xmark closeIcon">&lt/i>
+                        &lt/button>
+                    &lt/nav>
+                </code>
+            </pre>
+        </article>
+
+        <article>
+            <h2>Media Queries Gary</h2>
+            <p>Screen sizes</p>
+
+            <div>example</div>
+
+            <pre>
+                <code>
+                    &lt dsdsqsqwasdasd
+                </code>
+            </pre>
+        </article>
+
+        <article>
+            <h2>Forms Ruby</h2>
+            <p>Sizeres</p>
+            <p>Marerergins</p>
+            <p>ret</p>
+            <p>rfeer</p>
+            <p>Bfdgffgus</p>
+
+            <div>example</div>
+
+            <pre>
+                <code>
+                    &lt dsdsqsqwasdasd
+                </code>
+            </pre>
+        </article>
+
+        </article>
+    </main>
+    <footer>
+        <p> Team members: Gary Reid | Maria Reyes Barajas | Paulina Segovia Candia | Ruby Verma Sr.</p>
+        <p id="copy">&copy;Copyright 2023 </p>
+    </footer>
+    
+</body>
+</html>
