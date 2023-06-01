@@ -27,6 +27,8 @@ html {
 
 
   /* GLOBAL VARIABLES */
+  /*===============================================*/
+  /*===============================================*/
 
   /* COLORS  */
 
@@ -44,7 +46,7 @@ html {
   --yellow: rgb(239, 227, 203);
   }
 
-
+  /*===============================================*/
   /* TYPOGRAPHY */
 /*===============================================*/
 
@@ -67,14 +69,38 @@ body {
 }
 
 /* TYPOGRAPHY */
-h1, h2, h3, h4, h5, h6 {margin: 0 0 1rem 0; font-weight: 300;}
+h1, h2, h3, h4, h5, h6 {margin: 1rem 0; font-weight: 300;}
 
-h1 {font-size: 4.5rem;    line-height: 1;  }
-h2 {font-size: 3.75rem;   line-height: 1.25} 
-h3 {font-size: 3rem;      line-height: 1.2;}
-h4 {font-size: 2.25rem;   line-height: 1.3;}
-h5 {font-size: 1.5rem;    line-height: 1.4;}
-h6 {font-size: 1.25rem;   line-height: 1.5;}
+h1 {
+  font-size: 3.25rem;   
+  line-height: 1;  
+}
+
+h2 {
+  font-size: 2.75rem;   
+  line-height: 1.25
+}
+
+h3 {
+  font-size: 2rem;      
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: 1.25rem;  
+  line-height: 1.3;
+}
+
+h5 {
+  font-size: 1rem;   
+  font-weight: bold; 
+  line-height: 1.4;
+}
+
+h6 {
+  font-size: 1rem;   
+  line-height: 1.5;
+}
 
 
   /* Bold, italic, underline, and strikethrough (single letter tag) */
@@ -100,7 +126,7 @@ header {
 }
 
 #logo {
-    width: 10%;
+    width: 25%;
 }
 
   /* NAVIGATION */
@@ -175,17 +201,49 @@ nav a.active {
   /* MAIN */
 /*===============================================*/
 article {
-  width: 80%;
-  margin: 2em;
+  width: 90%;
+  margin: 1em;
  }
 
 section {
-  margin: 1em;
+  margin: 1em 0;
   padding: 1em;
   border: solid 1px var(--dark-gray);
   border-radius: 6px;
 }
 
+.homeBtns {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+  margin: 1em auto;
+}
+
+/* CODE */
+/*===============================================*/
+pre {
+  white-space: pre-wrap;
+  /* font-size: 12px; */
+  line-height: 15px;
+  margin: 0;
+  padding: 10px;
+  /* word-wrap: break-word; */
+  
+  /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;
+  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;
+  /* Opera 4-6 */
+  white-space: -o-pre-wrap;
+  /* Opera 7 */
+  word-wrap: break-word;
+  /* Internet Explorer 5.5+ */ 
+} 
+
+code {
+  text-align: left;
+}
 
   /* COLOR PALLETE */
 /*===============================================*/
@@ -266,25 +324,6 @@ ol.decimal2 {
   list-style-position: inside;
 }
 
-  /* COMPONENTS */
-/*===============================================*/
-/* PARALLAX SCROLL */
-/*===============================================*/
-
-.parallax {
-  /* Image */
-  background-image: url();
-
-  /* Set a height */
-  min-height: 300px;
-
-  /* Code for parallax scroll effect*/
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 
 /* TABLES  */
 /*===============================================*/
@@ -293,8 +332,8 @@ table {
   border-collapse: collapse;
   width: 100%;
   border: solid 1px var(--dark-blue);
-  margin: 1em;
-  line-height: 2em;
+  margin: 1em 0;
+  line-height: 1.2em;
   text-align: left;
 }
 
@@ -329,6 +368,12 @@ button, .button {
   padding: .5em;
   font-size: 1em;
   transition: all .25s;
+  margin: 1em;
+  max-width: 70%;
+}
+
+button.icon {
+  margin: 0;
 }
 
 button a {
@@ -341,31 +386,57 @@ button.black, button.darkBlue, button.gray{
 
 
 .XS {
-  width: 30px;
+  max-width: 30px;
+  font-size: 10px;
 }
 .XS:hover {
   border: solid  3px var(--basic-black);
 }
 
 .S {
-  /* width: 70px; */
-  padding: .3em;
+  max-width: 70px;
+  padding: .4em;
+  font-size: 12px;
 }
 
 .M {
-  /* width: 100px; */
+  max-width: 100px;
   padding: .7em;
+  font-size: 16px;
 }
 
 .L {
-  /* width: 100%; */
+  max-width: 200px;
   padding: 1.2em;
-  font-size: 1.2em;
+  font-size: 20px;
 }
 
 button:hover, .button:hover {
-  letter-spacing: 8px;
+  letter-spacing: 4px;
 }
+
+
+/*===============================================*/
+  /* COMPONENTS */
+/*===============================================*/
+
+/* PARALLAX SCROLL */
+/*===============================================*/
+
+.parallax {
+  /* Image */
+  background-image: url();
+
+  /* Set a height */
+  min-height: 300px;
+
+  /* Code for parallax scroll effect*/
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 
 /* MUSIC PLAYER  */
 /*===============================================*/
@@ -433,4 +504,19 @@ button:hover, .button:hover {
 
 .controls {
   margin-top: 10px;
+}
+
+
+/*===============================================*/
+/* FOOTER */
+/*===============================================*/
+
+footer {
+  background-color: var(--green);
+  border-top: solid 2px var(--dark-blue);
+  padding: 1em;
+}
+
+footer p {
+   margin: 1em;
 }

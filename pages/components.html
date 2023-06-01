@@ -58,7 +58,7 @@
     <main class="container">
 
         <article>
-            <h1>More complex components</h1>
+            <h1>Complex components</h1>
             <h2>What would you find here?</h2>
             <p>Here you will find some useful components to make your website more interactive and appealing. </p>
             <p>We provide a brief explanation of each component, how it will display and the code snippet.</p>
@@ -107,6 +107,17 @@
                 <h2>Parallax</h2>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla sapiente ratione itaque debitis provident enim ad aspernatur, vel facilis fugiat voluptatem beatae quis veniam maxime! Aut asperiores laborum ducimus non!</p>
                 
+                <div class="parallax">
+                    <img src="images/bgImg01" alt="Crowd at a music festival">
+                </div>
+
+                <h3>Music Fest 2023</h3>
+               <p>Loring elit.icabo blanditiis ipsa beatae fugit optio.</p>
+
+               <div class="parallax">
+                    <img src="images/bgImg02" alt="Fireworks display for Generic Band Name's finale set at Music Fest 2023">
+                </div>
+
                 <div>Code Example</div>
 
                 <pre>
@@ -121,7 +132,7 @@
 
                             &ltdiv class="parallax"&gt&ltimg src="images/bgImg02" alt="Fireworks display for Generic Band Name's finale set at Music Fest 2023"&gt&lt/div&gt
 
-                        &lt!-- CSS --&gt
+                        <!-- &lt!-- CSS --&gt
 
                             .parallax {                       
                                 /* Set a height */
@@ -132,7 +143,7 @@
                                 background-position: center;
                                 background-repeat: no-repeat;
                                 background-size: cover;
-                            }
+                            } -->
 
 
                         Method 02
@@ -150,8 +161,8 @@
                             .parallax .bgImg01 {
                                 /* Image */
                                 background-image: url(../images/bgImg01);
-                            
-                                /* Set a height */
+                            }
+                                <!-- /* Set a height */
                                 min-height: 300px;
                             
                                 /* Code for parallax scroll effect */
@@ -159,28 +170,28 @@
                                 background-position: center;
                                 background-repeat: no-repeat;
                                 background-size: cover;
-                            }
+                            } -->
 
                             .parallax .bgImg02 {
                                 /* Image */
                                 background-image: url(../images/bgImg02);
                             
-                                /* Set a height */
+                                <!-- /* Set a height */
                                 min-height: 300px;
                             
                                 /* Code for parallax scroll effect */
                                 background-attachment: fixed;
                                 background-position: center;
                                 background-repeat: no-repeat;
-                                background-size: cover;
+                                background-size: cover; -->
                             }
                     </code>
                 </pre>
             </article>
     
             <article>
-                <h2>Video player Ruby</h2>
-            
+                <h2>Video player</h2>
+                <p>We provide a simple video player to showcase your favorite video. We have to option to display your own video that you have to upload in the images folder, and also one link for a Youtube video.</p>
                 <div>
                     <select id="video-selection">
                       <option value="" disabled selected>Select Video Type</option>
@@ -257,7 +268,14 @@
     </main>
 
     <footer>
-        <p> Team members: Gary Reid | Maria Reyes Barajas | Paulina Segovia Candia | Ruby Verma Sr.</p>
+        <p> Team members: </p>
+        <ul class="disc1">
+            <li> Gary Reid </li>
+            <li> Maria Reyes Barajas</li>
+            <li> Paulina Segovia Candia </li>
+            <li> Ruby Verma Sr.</li>
+        </ul>
+
         <p id="copy">&copy;Copyright 2023 </p>
     </footer>
     
