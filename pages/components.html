@@ -18,10 +18,11 @@
 
 
     <!-- CSS custom styles -->
-    
+    <link rel="stylesheet" href="../css/prism.css">
     <link rel="stylesheet" href="../css/main.css">
 
     <!-- Javascript link -->
+    <script src="../scripts/prism.js" defer></script>
     <script src="../scripts/scripts.js" defer></script>
 
 </head>
@@ -105,87 +106,56 @@
 
             <article>
                 <h2>Parallax</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla sapiente ratione itaque debitis provident enim ad aspernatur, vel facilis fugiat voluptatem beatae quis veniam maxime! Aut asperiores laborum ducimus non!</p>
+                <p>Create interesting and elegant scroll effects that are sure to impress a crowd, all with just a couple lines of code and your own images.</p>
                 
                 <div class="parallax">
-                    <img src="images/bgImg01" alt="Crowd at a music festival">
+                    <img src="../images/bgImg01.jpg" alt="Crowd at a music festival">
                 </div>
 
                 <h3>Music Fest 2023</h3>
                <p>Loring elit.icabo blanditiis ipsa beatae fugit optio.</p>
 
                <div class="parallax">
-                    <img src="images/bgImg02" alt="Fireworks display for Generic Band Name's finale set at Music Fest 2023">
+                    <img src="../images/bgImg02.jpg" alt="Fireworks display for Generic Band Name's finale set at Music Fest 2023">
                 </div>
 
-                <div>Code Example</div>
+                <p>Code Example</p>
+                <p>Method 01</p>
+<pre>
+<code class="language-html">
+&ltdiv class="parallax"&gt&ltimg src="images/bgImg01" alt="Crowd at a music festival"&gt&lt/div&gt
 
-                <pre>
-                    <code>
-                        Method 01
-                        &lt!-- HTML --&gt
+&lth3&gtMusic Fest 2023&lt/h3&gt
+&ltp&gtLorem ipsum dolor sit amet cons.&lt/p&gt
 
-                            &ltdiv class="parallax"&gt&ltimg src="images/bgImg01" alt="Crowd at a music festival"&gt&lt/div&gt
+&ltdiv class="parallax"&gt&ltimg src="images/bgImg02" alt="Fireworks display for Generic Band Name's finale set at Music Fest 2023"&gt&lt/div&gt
+</code>
+</pre>
 
-                            &lth3&gtMusic Fest 2023&lt/h3&gt
-                            &ltp&gtLorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur explicabo blanditiis ipsa beatae fugit optio.&lt/p&gt
-
-                            &ltdiv class="parallax"&gt&ltimg src="images/bgImg02" alt="Fireworks display for Generic Band Name's finale set at Music Fest 2023"&gt&lt/div&gt
-
-                        <!-- &lt!-- CSS --&gt
-
-                            .parallax {                       
-                                /* Set a height */
-                                min-height: 300px;
-                        
-                                /* Code for parallax scroll effect */
-                                background-attachment: fixed;
-                                background-position: center;
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                            } -->
-
-
-                        Method 02
-                        &lt!-- HTML --&gt
+<p>Method 02</p>      
+<pre>
+<code class="language-html">                    
     
-                            &ltdiv class="parallax bgImg01"&gt&lt/div&gt
+&ltdiv class="parallax bgImg01"&gt&lt/div&gt
     
-                            &lth3&gtRecord Store #0001&lt/h3&gt
-                            &ltp&gtLorem ipsum dolor sit amet consectetur adipisicing elit.&lt/p&gt
+&lth3&gtRecord Store #0001&lt/h3&gt
+&ltp&gtLorem ipsum dolor sit amet consectetur adipisicing elit.&lt/p&gt
     
-                            &ltdiv class="parallax bgImg02"&gt&lt/div&gt
+&ltdiv class="parallax bgImg02"&gt&lt/div&gt
+
+&lt!-- CSS --&gt
     
-                        &lt!-- CSS --&gt
-    
-                            .parallax .bgImg01 {
+.parallax .bgImg01 {
                                 /* Image */
                                 background-image: url(../images/bgImg01);
                             }
-                                <!-- /* Set a height */
-                                min-height: 300px;
                             
-                                /* Code for parallax scroll effect */
-                                background-attachment: fixed;
-                                background-position: center;
-                                background-repeat: no-repeat;
-                                background-size: cover;
-                            } -->
-
                             .parallax .bgImg02 {
                                 /* Image */
                                 background-image: url(../images/bgImg02);
                             
-                                <!-- /* Set a height */
-                                min-height: 300px;
-                            
-                                /* Code for parallax scroll effect */
-                                background-attachment: fixed;
-                                background-position: center;
-                                background-repeat: no-repeat;
-                                background-size: cover; -->
                             }
-                    </code>
+</code>
                 </pre>
             </article>
     
@@ -245,17 +215,28 @@
                 <div class="buttons-container">
                     <!-- <input type="text" class="todo-input" placeholder="Enter a new to-do item"> -->
                     <div class="buttons">
-                    <button onclick="addTodo()">Add Song</button>
-                    <button onclick="editTodo()">Edit Song</button>
-                    <button onclick="deleteTodo()">Delete song</button>
+                      <button onclick="addTodo()">Add Song name</button>
+                      <button onclick="editTodo()">Edit Song name</button>
+                      <button onclick="deleteTodo()">Delete song name</button>
                     </div>
-                    <input type="text" class="todo-input" placeholder="Enter a new Song">
-                </div>
-                <div class="todo-list">
+                    <input type="text" class="todo-input" placeholder="Enter a new Song" />
+                  </div>
+                  <div class="todo-list">
                     <!-- <li>item1</li>
-                    <li>item2</li>
-                    <li>item3</li> -->
-                </div>
+                  <li>item2</li>
+                  <li>item3</li> -->
+                  </div>
+                  <audio id="audioPlayer" controls autoplay>
+                    <source src="path_to_song_file.mp3" type="audio/mpeg" />
+                    <!-- add more source tags for different audio formats if needed -->
+                  </audio>
+              
+                  <button onclick="playSong()" class="playbtn">Play Song</button>
+              
+                  <div id="controls">
+                    <input id="volume" type="range" min="0" max="1" step="0.1" value="1" />
+                  </div>
+                  <button id="pauseButton" class="pause">Pause</button>
     
                 <pre>
                     <code>

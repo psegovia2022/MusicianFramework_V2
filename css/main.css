@@ -416,6 +416,11 @@ button:hover, .button:hover {
   letter-spacing: 4px;
 }
 
+button.active, .button.active {
+  /* border-style: dashed; */
+  border: solid 4px; 
+}
+
 
 /* FORM */
 /*===============================================*/
@@ -427,8 +432,11 @@ form {
   position: relative;
 }
 legend {
+  background-color: var(--light-blue);
+  border-radius: 6px;
+  border: solid 1px var(--basic-white);
   position: relative;
-  padding: 0 0.25em;
+  padding:  0.5em;
   top: 2px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -439,7 +447,7 @@ fieldset {
   border-radius: 5px;
   border: solid 2px #fff;
   max-width: 450px;
-  margin: 0 auto;
+  margin: 1em 0 ;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
 } 
 
@@ -482,7 +490,7 @@ label{
   padding-left:0;
 }
 
-#submit {
+/* #submit {
   display: block;
   background-color: #fff;
   color: skyblue;
@@ -495,7 +503,7 @@ label{
   margin:4px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   
-}
+} */
 
 .button-container {
   display: flex;
@@ -520,7 +528,7 @@ textarea:focus {
 
 .parallax {
   /* Image */
-  background-image: url();
+  background-image: url("../images/bgImg01.jpg");
 
   /* Set a height */
   min-height: 300px;

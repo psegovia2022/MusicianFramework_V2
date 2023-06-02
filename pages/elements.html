@@ -18,10 +18,12 @@
 
 
     <!-- CSS custom styles -->
-    
+    <link rel="stylesheet" href="../css/prism.css">
     <link rel="stylesheet" href="../css/main.css">
+    
 
     <!-- Javascript link -->
+    <script src="../scripts/prism.js" defer></script>
     <script src="../scripts/scripts.js" defer></script>
 
 </head>
@@ -64,36 +66,28 @@
 
         <article>
             <h3>Typography</h3>
-            <p>Font Family</p>
-            <p>Headings</p>
-            <p>Line-height</p>
-            <p>Styles</p>
-            <p>Sizes</p>
+            <p>For our first stop, let us introduce our available styles in terms of typography! OnYour6 formats all your words using the font family 'Josefins Sans', from the bold of tour headliner announcements to the delicateness of a setlist flyer,  make use our custom headings that encompass both the familiarity of standard HTML headings but with the added flexibility of having text range from 20px all the way to 60px.</p><br>
+
+            <p>For everyone's viewing comfort, we employ the use of a 1.5 line height but to keep things visually interesting, italicized, bold, underlined, and strikethrough text are all available. Show off your wordsmithing, telling your story with us.</p><br>
             
-            <div>Code Example</div>
+            <p>Example code:</p>
+    <pre>
+    <code class="language-html">        <!-- EDITED THIS, NEW STUFF -  MARIA -->
+    &lt!-- Standard Headings --&gt      <!-- ADDED PRISM.CSS AND PRISM JS FOR THE CODE SNIPPETS, FEEL FREE TO DELETE OR KEEP -->
+    &lth1&gt Heading &lt/h1&gt          <!-- ALSO THE CLASS IS LANGUAGE-HTML OR LANGUAGE-CSS JUST IN CASE-->
+    &lth2&gt Heading &lt/h2&gt
+    &lth3&gt Heading &lt/h3&gt
+    &lth4&gt Heading &lt/h4&gt
+    &lth5&gt Heading &lt/h5&gt
+    &lth6&gt Heading &lt/h6&gt
 
-            <pre>
-                <code>
-                    &lt!-- Standard Headings --&gt
-                    &lth1&gt Heading &lt/h1&gt
-                    &lth2&gt Heading &lt/h2&gt
-                    &lth3&gt Heading &lt/h3&gt
-                    &lth4&gt Heading &lt/h4&gt
-                    &lth5&gt Heading &lt/h5&gt
-                    &lth6&gt Heading &lt/h6&gt
-
-
-                    &lt!-- Standard Font Size --&gt
-                    &ltp&gtOur standard font size sits at 16px over a 1.5 line height&ltp&gt
-
-
-                    &lt!-- Stylized Text Tags --&gt
-                    &ltstrong&gtBold&lt/strong&gt
-                    &ltem&gtItalic&lt/em&gt
-                    &ltu&gtUnderline&lt/u&gt
-                    &lts&gtStrikethrough&lt/s&gt
-                </code>
-            </pre>
+    &lt!-- Stylized Text Tags --&gt
+    &ltbold&gtBold&lt/bold&gt
+    &ltitalic&gtItalic&lt/italic&gt
+    &ltunder&gtUnderline&lt/under&gt
+    &ltstrike&gtStrikethrough&lt/strike&gt
+    </code>
+    </pre>
         </article>
 
         <article id="colors">
@@ -283,7 +277,7 @@
                <p>Example code:</p>
                 
                 <pre>
-                    <code>
+                    <code class="language-html">
                         &ltul class="disc1">
                             &ltli>Item 1&lt/li>
                                 &ltul class="disc2">
@@ -314,20 +308,20 @@
 
                 <p> Example code:</p>
                 
-                <pre>
-                    <code>
-                        &ltol class="decimal">
-                            &ltli>Item 1&lt/li>
-                                &ltol class="decimal2">
-                                    &ltli> Item 1.1&lt/li>
-                                    &ltli> Item 1.2&lt/li>
-                                    &ltli> Item 1.2&lt/li>
-                                &lt/ol>
-                            &ltli>Item 2&lt/li>
-                            &ltli>Item 3&lt/li>
-                        &lt/ol>
-                    </code>
-                </pre>
+<pre>
+<code class="language-html">
+&ltol class="decimal">
+&ltli>Item 1&lt/li>
+&ltol class="decimal2">
+&ltli> Item 1.1&lt/li>
+&ltli> Item 1.2&lt/li>
+&ltli> Item 1.2&lt/li>
+&lt/ol>
+&ltli>Item 2&lt/li>
+&ltli>Item 3&lt/li>
+&lt/ol>
+</code>
+</pre>
             </div>
         </article>
 
@@ -416,22 +410,28 @@
                     <p>Here you have several options. We recommend using the classes red and M for this button.</p>
 
                     <button class="reset red M">Reset</button>
-                    <pre>
-                        <code>
-                        &ltbutton class="reset M red"> Reset&lt/button>
-                        </code>
-                    </pre>
+<pre>
+<code>
+&ltbutton class="reset M red"> Reset&lt/button>
+</code>
+</pre>
 
             <h3>States</h3>
             <p>We cover stated nomal, hover and active.</p>
                 <h4>Hover</h4>
-                <p>When you hover, the button will expand.</p>
+                <p>When you hover, the button will expand. You don't need to add any particular class, because the hover state is included.</p>
                     <button class="L black"> Connect!</button>
-                    <!-- <pre>
-                        <code>
-                        &ltbutton class="reset M red"> Reset&lt/button>
-                        </code>
-                    </pre> -->
+                
+                <h4>Active</h4>
+                <p>Active buttons will change the border to a thicker one. </p>
+                    <button class="L darkOrange active"> Connect!</button>
+<p>Example code: You will only need to add and active class.</p>
+<pre>
+<code>
+&ltbuttonclass="L darkOrange active"> Connect!&lt/button>
+</code>    
+</pre>
+
 
             
         </article>
@@ -483,40 +483,38 @@
                     </tr>
                 </table>
 
-
                 <p> Example code: To build a striped table you just need to add the class "striped" to your open table tag.</p>
-                
-                <pre>
-                    <code>
-                        &lttable class="striped">
-                            &lttr>
-                                &ltth>Song Title&lt/th>
-                                &ltth>Album&lt/th>
-                                &ltth>Year&lt/th>
-                            &lt/tr>
-                            &lttr>
-                                &lttd> Les passants &lt/td>
-                                &lttd>Zaz&lt/td>
-                                &lttd>2010&lt/td>
-                            &lt/tr>
-                            &lttr>
-                                &lttd> Je veux &lt/td>
-                                &lttd>Zaz&lt/td>
-                                &lttd>2010&lt/td>
-                            &lt/tr>
-                            &lttr>
-                                &lttd> Le long de la route &lt/td>
-                                &lttd>Zaz&lt/td>
-                                &lttd>2010&lt/td>
-                            &lt/tr>
-                            &lttr>
-                                &lttd> Paris sera toujours Paris &lt/td>
-                                &lttd>Paris&lt/td>
-                                &lttd>2014&lt/td>
-                            &lt/tr>
-                        &lttable>
-                    </code>
-                </pre>
+<pre>
+<code>
+&lttable class="striped">
+&lttr>
+&ltth>Song Title&lt/th>
+&ltth>Album&lt/th>
+&ltth>Year&lt/th>
+&lt/tr>
+&lttr>
+&lttd> Les passants &lt/td>
+&lttd>Zaz&lt/td>
+&lttd>2010&lt/td>
+&lt/tr>
+&lttr>
+&lttd> Je veux &lt/td>
+&lttd>Zaz&lt/td>
+&lttd>2010&lt/td>
+&lt/tr>
+&lttr>
+&lttd> Le long de la route &lt/td>
+&lttd>Zaz&lt/td>
+&lttd>2010&lt/td>
+&lt/tr>
+&lttr>
+&lttd> Paris sera toujours Paris &lt/td>
+&lttd>Paris&lt/td>
+&lttd>2014&lt/td>
+&lt/tr>
+&lttable>
+</code>
+</pre>
             </div>
 
             <div>
@@ -564,37 +562,37 @@
 
                 <p> Example code: To build a bordered table you just need to add the class "bordered" to your open table tag.</p>
                 
-                <pre>
-                    <code>
-                        &lttable class="bordered">
-                            &lttr>
-                                &ltth>Song Title&lt/th>
-                                &ltth>Album&lt/th>
-                                &ltth>Year&lt/th>
-                            &lt/tr>
-                            &lttr>
-                                &lttd> Les passants &lt/td>
-                                &lttd>Zaz&lt/td>
-                                &lttd>2010&lt/td>
-                            &lt/tr>
-                            &lttr>
-                                &lttd> Je veux &lt/td>
-                                &lttd>Zaz&lt/td>
-                                &lttd>2010&lt/td>
-                            &lt/tr>
-                            &lttr>
-                                &lttd> Le long de la route &lt/td>
-                                &lttd>Zaz&lt/td>
-                                &lttd>2010&lt/td>
-                            &lt/tr>
-                            &lttr>
-                                &lttd> Paris sera toujours Paris &lt/td>
-                                &lttd>Paris&lt/td>
-                                &lttd>2014&lt/td>
-                            &lt/tr>
-                        &lttable>
-                    </code>
-                </pre>
+<pre>
+<code>
+&lttable class="bordered">
+&lttr>
+&ltth>Song Title&lt/th>
+&ltth>Album&lt/th>
+&ltth>Year&lt/th>
+&lt/tr>
+&lttr>
+&lttd> Les passants &lt/td>
+&lttd>Zaz&lt/td>
+&lttd>2010&lt/td>
+&lt/tr>
+&lttr>
+&lttd> Je veux &lt/td>
+&lttd>Zaz&lt/td>
+&lttd>2010&lt/td>
+&lt/tr>
+&lttr>
+&lttd> Le long de la route &lt/td>
+&lttd>Zaz&lt/td>
+&lttd>2010&lt/td>
+&lt/tr>
+&lttr>
+&lttd> Paris sera toujours Paris &lt/td>
+&lttd>Paris&lt/td>
+&lttd>2014&lt/td>
+&lt/tr>
+&lttable>
+</code>
+</pre>
             </div>
         </article>
 
@@ -620,30 +618,30 @@
             <img src="../images/navBarOpen.png" alt=""> -->
             <p> Example code: To build this navigation bar, you will need to add several classes and id, pay close attention to the following example code.</p>
 
-            <pre>
-                <code>
-                    &ltnav class="topNav">
-                        &lta href="" id="logoLink">
-                        &ltimg src="" alt="" id="logo">
-                        &lt/a>
-                        &ltul class="menu">
-                            &ltli>
-                                &lta href="" class="menuItem active">Option 1&lt/a>
-                            &lt/li>
-                            &ltli>
-                                &lta href="" class="menuItem">Option 2&lt/a>
-                            &lt/li>
-                            &ltli>
-                                &lta href="" class="menuItem">Option 3&lt/a>
-                            &lt/li>
-                        &lt/ul>
-                        &ltbutton class="icon">
-                            &lti class="fa-solid fa-bars menuIcon">&lt/i>
-                            &lti class="fa-regular fa-rectangle-xmark closeIcon">&lt/i>
-                        &lt/button>
-                    &lt/nav>
-                </code>
-            </pre>
+<pre>
+<code>
+&ltnav class="topNav">
+&lta href="" id="logoLink">
+&ltimg src="" alt="" id="logo">
+&lt/a>
+&ltul class="menu">
+&ltli>
+&lta href="" class="menuItem active">Option 1&lt/a>
+&lt/li>
+&ltli>
+&lta href="" class="menuItem">Option 2&lt/a>
+&lt/li>
+&ltli>
+&lta href="" class="menuItem">Option 3&lt/a>
+&lt/li>
+&lt/ul>
+&ltbutton class="icon">
+&lti class="fa-solid fa-bars menuIcon">&lt/i>
+&lti class="fa-regular fa-rectangle-xmark closeIcon">&lt/i>
+&lt/button>
+&lt/nav>
+</code>
+</pre>
         </article>
 
         <article>
@@ -652,15 +650,16 @@
 
             <div>example</div>
 
-            <pre>
-                <code>
-                    &lt dsdsqsqwasdasd
-                </code>
-            </pre>
+<pre>
+<code>
+&lt dsdsqsqwasdasd
+</code>
+</pre>
         </article>
 
         <article>
-            <h2>Forms Ruby</h2>
+            <h2>Forms</h2>
+            <p>The following example form can be modified adding or removing elements. However, the radio buttons, fieldset, labels are styled. </p>
             <form>
                 <fieldset >
                   <legend>Contact Information</legend>
@@ -722,17 +721,82 @@
                   </div>
                 </fieldset>
                 <div class="button-container">
-                <button type="submit" id="submit">Submit</button>
+                <button type="submit" class="button submit M lightBlue">Submit</button>
                 </div>
               </form>
 
-            <div>example</div>
+            <p>Example code:  To build this form, you will need to add several classes and id. Pay close attention to the following example code. You can remove or add some elements.</p>
 
-            <pre>
-                <code>
-                    &lt dsdsqsqwasdasd
-                </code>
-            </pre>
+<pre>
+<code>
+&ltform>
+&ltfieldset>
+&ltlegend>Contact Information&lt/legend>
+      
+&ltdiv class="form-group contact">
+&ltlabel for="name">Name:&lt/label>
+&ltinput type="text" id="name" name="name" required>
+&lt/div>
+      
+&ltdiv class="form-group contact">
+&ltlabel for="email">Email:&lt/label>
+&ltinput type="email" id="email" name="email" required>
+&lt/div>
+      
+&ltdiv class="form-group contact">
+&ltlabel for="message">Message:&lt/label>
+&lttextarea id="message" name="message" rows="5" required>&lt/textarea>
+&lt/div>
+&ltdiv class="form-group contact">
+&ltlabel for="country">Select your country:&lt/label>
+&ltselect id="country" name="country" required>
+              
+&ltoption value="" disabled selected>Select your country&lt/option>
+&ltoption value="usa">United States&lt/option>
+&ltoption value="india">India&lt/option>
+&ltoption value="canada">Canada&lt/option>
+&ltoption value="uk">United Kingdom&lt/option>
+&ltoption value="australia">Australia&lt/option>
+              
+&lt!-- Add more options as needed -->
+            
+&lt/select>
+&lt/div>
+ 
+&lt/fieldset>
+      
+&ltfieldset>
+&ltlegend>Preferences&lt/legend>
+&ltdiv class="form-group">
+&ltlabel>Favorite Music:&lt/label>
+          
+&ltdiv class="radio">
+&ltinput type="radio" id="Spotify" name="Music" value="spotify">
+&ltlabel for="Spotify" class="music">Spotify&lt/label>
+&lt/div>
+&ltdiv class="radio">
+&ltinput type="radio" id="AppleMusic" name="Music" value="apple">
+&ltlabel for="AppleMusic" class="music">Apple Music&lt/label>
+&lt/div>
+&ltdiv class="radio">
+&ltinput type="radio" id="AmazonMusic" name="Music" value="amazon">
+&ltlabel for="AmazonMusic" class="music">Amazon Music&lt/label>
+&lt/div>
+&lt/div>
+      
+&ltdiv class="form-group">
+&ltlabel for="newsletter">Subscribe to Newsletter:&lt/label>
+&ltinput type="checkbox" id="newsletter" name="newsletter">
+&lt/div>
+
+&lt/fieldset>
+&ltdiv class="button-container">
+&ltbutton type="submit" class="button submit M lightBlue">Submit&lt/button>
+&lt/div>
+
+&lt/form>
+</code>
+</pre>
         </article>
 
         </article>

@@ -61,71 +61,116 @@ var videoSelection = document.getElementById('video-selection');
         });
       });
 
-// ************* MUSICE PLAYER *************
+// ************* MUSIC PLAYER  TO-DO LIST*************
 //******************************************************
 let todos = [];
 
-    function addTodo() {
-      const todoInput = document.querySelector(".todo-input");
-      const todo = todoInput.value.trim();
-   if(todo==="")
-   alert("Please enter song for adding")
-   else{
-      if (todo) {
-        todos.push(todo);
-        updateTodoList();
-        todoInput.value = "";
-      }
-    }}
+function addTodo() {
+  const todoInput = document.querySelector(".todo-input");
+  const todo = todoInput.value.trim();
+  if (todo === "") {
+    alert("Please enter song name for adding");
 
-    function editTodo() {
-      const selectedTodo = document.querySelector(".todo-list input[type='checkbox']:checked");
-
-      if (selectedTodo) {
-        const index = selectedTodo.value;
-        const updatedTodo = prompt("Enter the updated to-do item:", todos[index]);
-
-        if (updatedTodo) {
-          todos[index] = updatedTodo;
-          updateTodoList();
-        }
-      } else {
-        alert("Please select song  to edit.");
-      }
+    todoInput.focus(); // Set focus on the input text
+  } else {
+    if (todo) {
+      todos.push(todo);
+      updateTodoList();
+      todoInput.value = "";
     }
+  }
+}
 
-    function deleteTodo() {
-      const selectedTodo = document.querySelector(".todo-list input[type='checkbox']:checked");
+function editTodo() {
+  const selectedTodo = document.querySelector(
+    ".todo-list input[type='radio']:checked"
+  );
 
-      if (selectedTodo) {
-        const index = selectedTodo.value;
-        todos.splice(index, 1);
-        updateTodoList();
-      } else {
-        alert("Please select song to delete.");
-      }
+  if (selectedTodo) {
+    const index = selectedTodo.value;
+    const updatedTodo = prompt(
+      "Enter the updated to-do item:",
+      todos[index]
+    );
+
+    if (updatedTodo) {
+      todos[index] = updatedTodo;
+      updateTodoList();
     }
+  } else {
+    alert("Please select song name  to edit.");
+  }
+}
 
-    function updateTodoList() {
-      const todoList = document.querySelector(".todo-list");
-      todoList.innerHTML = "";
+function deleteTodo() {
+  const selectedTodo = document.querySelector(
+    ".todo-list input[type='radio']:checked"
+  );
 
-      for (let i = 0; i < todos.length; i++) {
-        const todo = todos[i];
+  if (selectedTodo) {
+    const index = selectedTodo.value;
+    todos.splice(index, 1);
+    updateTodoList();
+  } else {
+    alert("Please select song name to delete.");
+  }
+}
 
-         const todoItem = document.createElement("div");
-         todoItem.className = "todo-item";
+function updateTodoList() {
+  const todoList = document.querySelector(".todo-list");
+  todoList.innerHTML = "";
 
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.value = i;
+  for (let i = 0; i < todos.length; i++) {
+    const todo = todos[i];
 
-        const text = document.createElement("span");
-        text.className = "text";
-        text.innerText = todo;
+    const todoItem = document.createElement("div");
+    todoItem.className = "todo-item";
 
-        todoItem.appendChild(checkbox);
-        todoItem.appendChild(text);
-        todoList.appendChild(todoItem);
-      }
-    }
+    const checkbox = document.createElement("input");
+    //for selecting one song at a time we use radio button
+    checkbox.type = "radio";
+    checkbox.name = "selectedSong";
+    checkbox.value = i;
+
+    const text = document.createElement("span");
+    text.className = "text";
+    text.innerText = todo;
+
+    todoItem.appendChild(checkbox);
+    todoItem.appendChild(text);
+    todoList.appendChild(todoItem);
+  }
+}
+function playSong() {
+  const audioPlayer = document.getElementById("audioPlayer");
+
+  const selectedSong = document.querySelector(
+    "input[name='selectedSong']:checked"
+  );
+
+  if (selectedSong) {
+    const index = selectedSong.value;
+    const songName = todos[index];
+
+    // Update the source of the audio element to the selected song
+    audioPlayer.src = songName;
+    audioPlayer.play();
+  } else {
+    alert("Please select a song to play.");
+  }
+}
+var volumeInput = document.getElementById("volume");
+volumeInput.addEventListener("input", function () {
+  audioPlayer.volume = volumeInput.value;
+});
+
+const pauseButton = document.getElementById("pauseButton");
+
+pauseButton.addEventListener("click", function () {
+  //
+  const selectedSong = document.getElementById("audioPlayer");
+
+  if (selectedSong) {
+    selectedSong.pause();
+  }
+});
