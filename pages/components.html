@@ -146,22 +146,22 @@
 &lt!-- CSS --&gt
     
 .parallax .bgImg01 {
-                                /* Image */
-                                background-image: url(../images/bgImg01);
-                            }
+/* Image */
+background-image: url(../images/bgImg01);
+}
                             
-                            .parallax .bgImg02 {
-                                /* Image */
-                                background-image: url(../images/bgImg02);
+.parallax .bgImg02 {
+/* Image */
+background-image: url(../images/bgImg02);
                             
-                            }
+}
 </code>
-                </pre>
+</pre>
             </article>
     
             <article>
                 <h2>Video player</h2>
-                <p>We provide a simple video player to showcase your favorite video. We have to option to display your own video that you have to upload in the images folder, and also one link for a Youtube video.</p>
+                <p>We provide a simple video player to showcase your favorite video. We have the option to display your own video that you have to upload in the images folder, and also one link for a Youtube video. And it would look like the following.</p>
                 <div>
                     <select id="video-selection">
                       <option value="" disabled selected>Select Video Type</option>
@@ -198,13 +198,46 @@
                     </div>
                   </div>
     
-                <div>example</div>
+                <p>Example code: For the video player, you should add several classes and id, as the code sample shows.</p>
                     
-                <pre>
-                    <code>
-                        &lt dsdsqsqwasdasd
-                    </code>
-                </pre>
+<pre>
+<code class="language-html">
+&ltselect id="video-selection">
+&ltoption value="" disabled selected>Select Video Type&lt/option>
+&ltoption value="own">Own Video&lt/option>
+&ltoption value="youtube">YouTube Video&lt/option>
+&lt/select>
+&lt/div>
+
+&lt!---video for own recording--->
+
+&ltdiv class="video-player" id="own-video-player">
+&ltvideo class="video active" width="100%" controls>
+&ltsource src="Assignment1.4.mp4" type="video/mp4" />
+&lt/video>
+&ltdiv class="controls">
+&ltbutton class="play-pause">Play/Pause&lt/button>
+&ltinput class="volume" type="range" min="0" max="1" step="0.1" value="1"/>
+&lt/div>
+&lt/div>
+
+&lt!---youtube video write youtube video id--->
+&ltdiv class="video-player" id="youtube-video-player">
+&ltiframe
+    class="video"
+    width="100%"
+    height="100%"
+    src="https://www.youtube.com/embed/_Td7JjCTfyc" 
+    frameborder="0"
+    allowfullscreen
+    >
+&lt/iframe>
+&ltdiv class="controls">
+&ltbutton class="play-pause">Play/Pause&lt/button>
+&ltinput class="volume" type="range" min="0" max="1" step="0.1"value="1" />
+&lt/div>
+</code>
+</pre>
             </article>
 
          
@@ -245,6 +278,36 @@
                 </pre>
             </article>
     
+            <article>
+                <h2>Lightbox</h2>
+
+                <p>Here is a lightbox galley. It is important to mention that in order to look exactly how it is display next, the picture size is 400px x 400px. If you have different sizes, you will need to manually change the padding and margin for the popup image button.</p>
+
+    <div class="gallery">
+        <img src="../images/image05n.png" class="popup" />
+        <img src="../images/image06n.png" class="popup" />
+        <img src="../images/music04n.png" class="popup" />
+        <img src="../images/image011n.png" class="popup" />
+        <img src="../images/image10n.png" class="popup" />
+        <img src="../images/image07n.png" class="popup" />
+      </div>
+
+      <p>Example code: For the lightbox you should add just one class to each picture you include, as the code sample shows.</p>
+                    
+<pre>
+<code class="language-html">
+&ltdiv class="gallery">
+&ltimg src="../images/image05n.png" class="popup" />
+&ltimg src="../images/image06n.png" class="popup" />
+&ltimg src="../images/music04n.png" class="popup" />
+&ltimg src="../images/image011n.png" class="popup" />
+&ltimg src="../images/image10n.png" class="popup" />
+&ltimg src="../images/image07n.png" class="popup" />
+&lt/div>
+
+</code>
+</pre>
+            </article>
             </article>
     </main>
 

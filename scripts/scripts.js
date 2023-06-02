@@ -174,3 +174,95 @@ pauseButton.addEventListener("click", function () {
     selectedSong.pause();
   }
 });
+
+
+// ************* LIGHTBOX ****************************
+//******************************************************
+
+
+function includepopup() {
+  let html1 =
+    '<div id="popup"><span id="close-button" onclick="closepopup()">&times;</span><span id="left-button">&#10094;</span><span id="right-button">&#10095;</span><img src="image/pic01.jpg" alt="mainpopupimage" id="mainpopimage"/></div>';
+
+  let popdiv = document.createElement("div");
+  popdiv.innerHTML = html1;
+  
+  document.body.insertBefore(popdiv, document.body.firstChild);
+}
+includepopup();
+
+// function for init popup
+function imagepopupinit(popup) {
+  //select all image with class popup
+  // includepopup();
+  img = document.getElementsByClassName(popup);
+
+  for (var i = 0; i < img.length; i++) {
+    img[i].style.cursor = "pointer";
+    //eventlistener
+    img[i].addEventListener("click", function () {
+      document.getElementById("mainpopimage").src = this.src;
+      document.getElementById("popup").style.display = "block";
+      document.getElementsByClassName("gallery")[0].style.opacity = "0.3";
+      checkarrow()
+      // document.getElementsByClassName("gallary").style.
+    });
+  }
+}
+imagepopupinit("popup");
+//for closing image
+function closepopup() {
+  document.getElementById("mainpopimage").src = "";
+  document.getElementById("popup").style.display = "none";
+  document.getElementsByClassName("gallery")[0].style.opacity = "1";
+  
+  
+}
+// for getting current image
+function getcurrentImage(){
+for(i=0;i<img.length;i++){
+if(img[i].src==document.getElementById("mainpopimage").src){
+  current=i;
+}
+}
+}
+// for getting next image with the right arrow
+function nextImage(){
+getcurrentImage();
+current++;
+document.getElementById("mainpopimage").src=img[current].src;
+
+}
+//  for getting previous image by left arrow
+function prevImage(){
+getcurrentImage();
+current--;
+document.getElementById("mainpopimage").src=img[current].src;
+
+}
+// clicking right button
+document.getElementById('right-button').addEventListener('click',function(){
+nextImage()
+checkarrow()
+})
+//clicking right button
+document.getElementById('left-button').addEventListener('click',function(){
+prevImage();
+checkarrow();
+})
+// checking previus and last image then hiding right and left button according position of image
+function checkarrow() {
+  getcurrentImage();
+
+  if (current === 0) {
+    document.getElementById("left-button").style.display = "none";
+  } else {
+    document.getElementById("left-button").style.display = "block";
+  }
+
+  if (current === img.length - 1) {
+    document.getElementById("right-button").style.display = "none";
+  } else {
+    document.getElementById("right-button").style.display = "block";
+  }
+}

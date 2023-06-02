@@ -582,6 +582,14 @@ textarea:focus {
 
 
 /* VIDEO PLAYER */
+/*===============================================*/
+
+select {
+  margin: 1em;
+  border: solid 2px var(--dark-blue);
+}
+
+
 
 .video-player {
   max-width: 100%;
@@ -610,6 +618,89 @@ textarea:focus {
 }
 
 
+/* LIGHTBOX */
+/*===============================================*/
+
+
+#popup {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(211, 211, 211, 0.5);
+  display: none;
+ 
+  
+}
+#mainpopimage {
+  position:fixed;
+  display: block;
+  position: absolute;
+  border: 4px solid var(--light-blue);
+  transform: translate(30%, 50%); 
+  max-width: 60%;
+  margin: 0px auto;
+  height:auto;
+}
+.gallery {
+  display: flex;
+  flex-wrap:wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 10px;
+  max-width: 600px;
+  /* height: 100vh; */
+  margin: 1em auto;
+  position: relative;
+}
+
+.gallery img {
+  border: 3px solid var(--light-gray);
+  max-width: 150px;
+  height: 150px;
+}
+
+#close-button {
+        position: absolute;
+        top: 10em;
+        right: 1em;
+        color: var(--dark-blue);
+        border: solid 3px var(--light-blue);
+        border-radius: 6px;
+        padding: .2em;
+        font-size: 30px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+#left-button {
+
+        position: absolute;
+        top: 50%;
+        left: 1em;
+        color:var(--dark-blue);
+        font-size: 28px;
+        cursor: pointer;
+        z-index: 1001;
+        position: absolute;
+        transform: translateY(-50%);
+
+  }
+    
+    #right-button {
+        position: absolute;
+        top: 50%;
+        right: 1em;
+        transform: translate(0, -50%);
+        color: var(--dark-blue);
+        font-size: 28px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+
+
 /*===============================================*/
 /* FOOTER */
 /*===============================================*/
@@ -622,4 +713,23 @@ footer {
 
 footer p {
    margin: 1em;
+}
+
+
+
+/*===============================================*/
+/* MEDIAQUERIES */
+/*===============================================*/
+
+@media only screen and (min-width: 100px) {
+     
+  #mainpopimage {
+    
+    top: 50%;
+    left: 50%;
+   
+    border: 8px solid rgb(118, 158, 226);
+    transform: translate(-50%, -50%);
+   
+  }
 }
