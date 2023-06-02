@@ -598,7 +598,7 @@
             </div>
         </article>
 
-        <article>
+        <!-- <article>
             <h2>Images ??? Gary</h2>
             <p>Tags used</p>
 
@@ -609,7 +609,7 @@
                     &lt dsdsqsqwasdasd
                 </code>
             </pre>
-        </article>
+        </article> -->
 
         <article>
             <h2>Navigation Bar</h2>
@@ -661,11 +661,70 @@
 
         <article>
             <h2>Forms Ruby</h2>
-            <p>Sizeres</p>
-            <p>Marerergins</p>
-            <p>ret</p>
-            <p>rfeer</p>
-            <p>Bfdgffgus</p>
+            <form>
+                <fieldset >
+                  <legend>Contact Information</legend>
+              
+                  <div class="form-group contact">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                  </div>
+              
+                  <div class="form-group contact">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                  </div>
+              
+                  <div class="form-group contact">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                  </div>
+                  <div class="form-group contact">
+                    <label for="country">Select your country:</label>
+                    <select id="country" name="country" required>
+                      
+                      <option value="" disabled selected>Select your country</option>
+                      <option value="usa">United States</option>
+                      <option value="india">India</option>
+                      <option value="canada">Canada</option>
+                      <option value="uk">United Kingdom</option>
+                      <option value="australia">Australia</option>
+                      <!-- Add more options as needed -->
+                    </select>
+                    </div>
+                    
+                  
+                </fieldset>
+              
+                <fieldset>
+                  <legend>Preferences</legend>
+              
+                  <div class="form-group">
+                    <label>Favorite Music:</label>
+                  
+                    <div class="radio">
+                      <input type="radio" id="Spotify" name="Music" value="spotify">
+                      <label for="Spotify" class="music">Spotify</label>
+                    </div>
+                    <div class="radio">
+                      <input type="radio" id="AppleMusic" name="Music" value="apple">
+                      <label for="AppleMusic" class="music">Apple Music</label>
+                    </div>
+                    <div class="radio">
+                      <input type="radio" id="AmazonMusic" name="Music" value="amazon">
+                      <label for="AmazonMusic" class="music">Amazon Music</label>
+                    </div>
+                  </div>
+              
+                  <div class="form-group">
+                    <label for="newsletter">Subscribe to Newsletter:</label>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                  </div>
+                </fieldset>
+                <div class="button-container">
+                <button type="submit" id="submit">Submit</button>
+                </div>
+              </form>
 
             <div>example</div>
 
