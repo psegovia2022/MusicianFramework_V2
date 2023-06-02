@@ -733,3 +733,44 @@ footer p {
    
   }
 }
+
+@media only screen and (min-width:800px)  {
+
+  /*************** header *******************/
+  button.icon {
+      display: none;
+  }
+  
+  nav ul {
+    /* background-color: var(--green); */
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: .5em; 
+      transform: translateY(0);
+      padding: 0;
+      border-bottom: solid 1px var(--sec-alt-color);
+  }
+
+  nav ul li a {
+      margin: 0;
+  }
+
+  #logo {
+display: none;
+  }
+
+  div.picBig {
+    height: 500px;
+    margin: auto;
+    max-width: 100%;
+    background-image: url("../images/crowdConcert.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: var(--main-color);
+
+}
+
+}
